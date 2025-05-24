@@ -97,3 +97,17 @@ Modelo de ramas propuesto:
 ## 📌 Notas finales
 
 Este entorno está preparado para permitir la incorporación de nuevos miembros de forma rápida, con instrucciones claras y herramientas integradas para testing, despliegue local y desarrollo colaborativo.
+
+
+## 🛠️ Integración Continua (CI)
+
+Este proyecto está conectado a Jenkins mediante un `Jenkinsfile` que define los siguientes pasos automatizados:
+
+- Clonado del repositorio desde GitHub
+- Instalación de dependencias Python
+- Linting del código fuente con flake8
+- Pruebas unitarias con pytest y cobertura
+- Construcción de imagen Docker
+- Subida de imagen a Docker Hub (solo ramas main/develop/master)
+
+El pipeline se ejecuta automáticamente cada vez que se realiza un push al repositorio.

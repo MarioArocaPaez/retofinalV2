@@ -1,0 +1,5 @@
+Lanzada por el usuario mario
+Obtained Jenkinsfile from git https://github.com/MarioArocaPaez/retofinalV2.git
+[Pipeline] Start of Pipeline
+[Pipeline] End of Pipeline
+Finished: SUCCESS
