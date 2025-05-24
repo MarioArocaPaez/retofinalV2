@@ -1,0 +1,20 @@
+- name: Iniciar servicio Docker
+  service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Eliminar contenedor anterior si existe
+  docker_container:
+    name: "{{ docker_container_name }}"
+    state: absent
+    force_kill: true
+
+- name: Desplegar nueva versión de imagen Docker
+  docker_container:
+    name: "{{ docker_container_name }}"
+    image: "{{ docker_image }}"
+    state: started
+    restart_policy: always
+    ports:
+      - "{{ docker_host_port }}:{{ docker_container_port }}"

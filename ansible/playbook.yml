@@ -1,0 +1,10 @@
+- name: Despliegue de imagen Docker
+  hosts: app
+  become: yes
+  vars:
+    docker_image: "nginx"
+    docker_container_name: "reto-final-container"
+    docker_host_port: 5000
+    docker_container_port: 80
+  roles:
+    - deploy_app
