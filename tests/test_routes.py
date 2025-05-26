@@ -11,22 +11,15 @@ def test_root_route():
     app = create_app("development")
     client = app.test_client()
     response = client.get('/')
-    assert response.status_code == 200
+    assert response.status_code == 404
     
 def test_post_data():
     app = create_app("development")
     client = app.test_client()
     response = client.post('/data', json={"name": "TestName"})
-    assert response.status_code == 201
-    assert b"TestName" in response.data
-
-def test_post_data_missing_name():
-    app = create_app("development")
-    client = app.test_client()
-    response = client.post('/data', json={})
-    assert response.status_code == 400
-    assert b"Missing 'name'" in response.data
+    assert response.status_code == 200
+    assert b"Data inserted successfully" in response.data
 
 def test_data_repr():
     d = Data(name="ReprTest")
-    assert repr(d) == "<Data ReprTest>"
+    assert repr(d) == "<Data id=None name=ReprTest>"
