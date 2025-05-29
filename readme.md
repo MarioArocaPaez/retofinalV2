@@ -5,6 +5,12 @@ Está diseñada para que cualquier miembro del equipo pueda comenzar rápidament
 
 ---
 
+# 🎥 Presentación del Proyecto
+
+[Haz clic aquí para ver el video de presentación del proyecto](https://drive.google.com/file/d/1L-e-a2q_A2zaAnJLSMsna6tXuzJHKao9/view?usp=sharing)
+
+---
+
 ## 📦 Arquitectura del Software
 
 La solución está compuesta por los siguientes componentes:
